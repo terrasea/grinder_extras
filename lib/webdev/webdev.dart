@@ -6,7 +6,7 @@ part 'build.dart';
 part 'serve.dart';
 
 getWedevApp(webdevApp) {
-  if(webdevApp == null) {
+  if (webdevApp == null) {
     return PubApp.global('webdev');
   }
 

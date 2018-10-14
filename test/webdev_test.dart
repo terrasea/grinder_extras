@@ -1,7 +1,7 @@
 import 'package:grinder/grinder.dart' show PubApp;
 import 'package:mockito/mockito.dart';
 import 'package:simple_grinder/webdev/webdev.dart'
-    show build, serve, activateIfInActive, getWedevApp;
+    show build, serve;
 import 'package:test/test.dart';
 
 class MockPubApp extends Mock implements PubApp {}

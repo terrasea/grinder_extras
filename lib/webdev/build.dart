@@ -4,7 +4,7 @@ build({dartdevc: false, webdevApp}) {
   webdevApp = getWedevApp(webdevApp);
   var arguments = ['build'];
 
-  if(dartdevc) {
+  if (dartdevc) {
     arguments.add('--no-release');
   }
   webdevApp.run(arguments);

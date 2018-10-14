@@ -3,7 +3,7 @@ library simple_grinder.dartfmt;
 import 'package:grinder/grinder.dart' show PubApp;
 
 getFormatApp(formatApp) {
-  if(formatApp != null) {
+  if (formatApp != null) {
     return formatApp;
   }
 
@@ -16,8 +16,8 @@ bool check({directories, files, formatApp}) {
     ..addAll(files != null ? files : []);
   var arguments = ['--dry-run']..addAll(tests);
 
-  final String output = getFormatApp(formatApp)
-      .run(arguments, script: 'format');
+  final String output =
+      getFormatApp(formatApp).run(arguments, script: 'format');
   if (output.split('\n').where((line) => line.isNotEmpty).isNotEmpty) {
     return false;
   }
