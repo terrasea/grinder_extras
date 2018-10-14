@@ -2,7 +2,6 @@ part of simple_grinder.webdev;
 
 serve({dart2js: false, testPort, webPort, webdevApp}) {
   webdevApp = getWedevApp(webdevApp);
-  activateIfInActive(webdevApp);
   var arguments = ['serve'];
   if(dart2js) {
     arguments.add('--release');

@@ -2,12 +2,22 @@ library simple_grinder.dartfmt;
 
 import 'package:grinder/grinder.dart' show PubApp;
 
-bool check({directories, files}) {
+getFormatApp(formatApp) {
+  if(formatApp != null) {
+    return formatApp;
+  }
+
+  return PubApp.global('dart_style');
+}
+
+bool check({directories, files, formatApp}) {
   List<String> tests = new List()
     ..addAll(directories != null ? directories : [])
     ..addAll(files != null ? files : []);
-  final String output = PubApp.global('dart_style')
-      .run(['--dry-run']..addAll(tests), script: 'format');
+  var arguments = ['--dry-run']..addAll(tests);
+
+  final String output = getFormatApp(formatApp)
+      .run(arguments, script: 'format');
   if (output.split('\n').where((line) => line.isNotEmpty).isNotEmpty) {
     return false;
   }

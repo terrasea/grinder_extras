@@ -8,13 +8,6 @@ class MockPubApp extends Mock implements PubApp {}
 
 main() {
   group('[webdev]', () {
-    test('activate', () {
-      var mockPubApp = new MockPubApp();
-      when(mockPubApp.isActivated).thenReturn(false);
-      activateIfInActive(mockPubApp);
-      verify(mockPubApp.activate()).called(1);
-    });
-
     test('serve calls run on webdevApp', () {
       var mockPubApp = new MockPubApp();
       when(mockPubApp.isActivated).thenReturn(true);
