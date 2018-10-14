@@ -1,6 +1,3 @@
-# simple_grinder
+# grinder_extra
 
-A sample command-line application.
-
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+A extra set of commands for grinder for my personal use.
