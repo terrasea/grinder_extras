@@ -1,20 +1,4 @@
-library simple_grinder.pub;
-
-import 'package:grinder/grinder.dart';
-
-activateIfInActive(webdevApp) {
-  if(!webdevApp.isActivated) {
-    webdevApp.activate();
-  }
-}
-
-getWedevApp(webdevApp) {
-  if(webdevApp == null) {
-    return PubApp.global('webdev');
-  }
-
-  return webdevApp;
-}
+part of simple_grinder.webdev;
 
 serve({dart2js: false, testPort, webPort, webdevApp}) {
   webdevApp = getWedevApp(webdevApp);
@@ -32,16 +16,5 @@ serve({dart2js: false, testPort, webPort, webdevApp}) {
     arguments.add('web:$webPort');
   }
 
-  webdevApp.run(arguments);
-}
-
-build({dartdevc: false, webdevApp}) {
-  webdevApp = getWedevApp(webdevApp);
-  activateIfInActive(webdevApp);
-  var arguments = ['build'];
-  
-  if(dartdevc) {
-    arguments.add('--no-release');
-  }
   webdevApp.run(arguments);
 }

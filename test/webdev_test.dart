@@ -1,6 +1,6 @@
 import 'package:grinder/grinder.dart' show PubApp;
 import 'package:mockito/mockito.dart';
-import 'package:simple_grinder/webdev/serve.dart'
+import 'package:simple_grinder/webdev/webdev.dart'
     show build, serve, activateIfInActive, getWedevApp;
 import 'package:test/test.dart';
 
