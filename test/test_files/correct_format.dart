@@ -1,0 +1,3 @@
+void correct() {
+  return null;
+}
